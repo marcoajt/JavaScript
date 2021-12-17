@@ -12,8 +12,8 @@ console.log(numero == numeroString);//somente valor
 
 console.log(numero + numeroString);//concatena por causa da string
 
+//conversão explícita
+
 //Number()
 //String()
 console.log(numero + Number(numeroString));
-
-//conversão explícita
