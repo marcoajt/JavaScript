@@ -36,3 +36,15 @@ A propriedade `length` é muito usada no dia a dia do desenvolvimento web. Você
 > Percebeu que `length` não leva parênteses no final da palavra? Há uma diferença entre **métodos** e **propriedades** que não vamos abordar durante este curso, mas vamos deixar aqui a dica caso tenha curiosidade! ;)
 
 Você pode conferir a lista completa de [métodos de string do MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#métodos) (são vários), com a descrição de cada um, e praticar com os exemplos.
+
+## Git
+
+1 - ``git init``
+
+2 - ``git remote add origin caminho``
+
+3 -`` git add .``
+
+4 - ``git commit -m "comentario"``
+
+5 - ``git push origin master``
