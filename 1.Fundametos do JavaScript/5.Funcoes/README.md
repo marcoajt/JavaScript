@@ -406,3 +406,366 @@ Diferente do TypeError do Python, no Javascript receberemos um `SyntaxError: Une
 
 [11:21] Leonardo: Até!
 
+# Arrow Function
+
+[00:00] Ju: Ainda sobre funções. Léo, funções é um assunto vasto no JavaScript. Estamos começando a raspar o  começo de função, mas, tem bastante coisa para se falar.
+
+[00:12] Ju: Nós vamos concluir com outro, um terceiro tipo de função, uma terceira forma de escrever função. Então, antes de qualquer coisa,  antes que eu esqueça, eu vou compartilhar a minha tela. 
+
+[00:24] Ju: Vou escrever mais códigos, vou criar um novo arquivo e  vou chamar de “arrow-function.js”. Um nome um pouco estranho, mas já  vamos entender.
+
+[00:39] Ju: Qual é esse terceiro tipo de se escrever funções e para que ele serve?
+
+[00:45] Ju: A *arrow* *function* é de seta, de flecha, porque essa função utiliza uma flecha na sintaxe dela. 
+
+[00:56] Ju: Ela é uma grande novidade no ES6, e vamos escrever, vamos ver a cara dela e o Léo vai falar para nós os detalhes e para que ela  serve.
+
+[01:06] Ju: Antes criávamos as nossas *functions*, por exemplo, uma `function apresentar`, e aí eu não preciso passar parâmetro, ou eu posso passar um nome como parâmetro `(nome)`, abro e fecho chaves, e aí, `return` uma *string*, um *template* *string*, que já vimos anteriormente, `”meu nome é”`, abre cifrão e chaves, passa a variável `${nome}` dentro dele.
+
+[01:45] Ju: É a forma clássica e vimos expressão de função, também. Agora, *arrow* *function*. 
+
+[01:51] Ju: Vamos supor que eu queira fazer dessa terceira forma,  seria parecida com a função de expressão. Primeiro eu crio uma `const`, eu vou chamar de `apresentarArrow` (só para sabermos o que estamos falando). A diferença é: eu coloco um igual (lembrando que criamos uma *const*, passamos um identificador, um nome para ela, um igual e atribuímos do lado direito do igual), então, o que vamos atribuir?
+
+[02:18] Ju: Primeiro, vamos passar o parâmetro, então, temos um parâmetro para passar nessa função, que é `= nome`. Em seguida, o que vem? Vem a *arrow*, a flecha, então, vamos passar a flecha `=>`. E abro e fecho chaves? Não, não preciso passar chaves, nesse caso, para essa função, porque tudo que essa função tem que fazer é uma linha só  de código. 
+
+[02:47] Ju: Então, como ficaria? Ficaria `const apresentarArrow = nome =>`, eu preciso passar, nesse caso, somente o que a função vai retornar, ou seja, uma *string* com a variável `${nome}`. Então, a *key* é uma função, uma *arrow* *function* clássica.
+
+[03:07] Ju: Eu tenho só um parâmetro. Eu não tenho, nem parênteses  para fechar os parâmetros e nem chaves para fechar o bloco de código do  que a função tem que fazer.
+
+[03:20] Ju: Eu vou só dar mais um exemplo, antes do que o Léo debulhar o que é nessa função, para que ela funcione.
+
+[03:27] Ju: Eu vou criar mais uma *const*, vou chamar de `const soma` (vou enviar a função soma), de novo. Passamos o igual e vamos atribuir. 
+
+[03:36] Ju: Como eu tenho dois parâmetros, nesse caso, aí sim eu  preciso abrir e fechar parênteses, senão o JavaScript fica meio perdido.
+
+[03:47] Ju: Então, `const soma = (num1, num2)`. Entro com a flecha, a *arrow*, a seta. E preciso do `return`? Nesse caso, também não preciso do `return`, porque eu só estou passando uma instrução de uma linha. Qual é a  instrução que eu vou passar? É a mesma que já vimos anteriormente, que é só `=> num1 + num2`.
+
+[04:12] Ju: Essa é a cara da *arrow* *function*. Léo,  fala para nós um pouco sobre as características desse jeito curioso, e  um pouco diferente, de se escrever funções no JavaScript.
+
+[04:23] Leonardo: Essa *arrow* *function* veio junto  com o ES6, que foi o de 2015. Foi uma grande novidade, como a Ju disse, e ela deixou nosso código bem melhor. Conseguimos, agora, declarar tudo  numa linha só, não precisa de chaves, não precisa de *return*, não precisa de nada disso.
+
+[04:42] Leonardo: Ela, também, não pode ser nomeada. Ela não tem nem  essa possibilidade para podemos usar, então, fiquem um pouco atentos com isso. E ela sempre vem com uma *const* e o nome da nossa variável, que vamos usar antes.
+
+[04:58] Leonardo: Ela tem alguns casos especiais, Ju, que vamos ver  mais para frente, que é com objeto, com outras coisas; não é o tema  desse curso, vamos ver em outros cursos. E, eu acho que é isso, por  enquanto, que eu posso debulhar para nós da *arrow* *function*.
+
+[05:15] Ju: Mas, Léo, não precisamos usar o *return*, ele faz tudo sozinho, mas eu tenho uma linha de código.
+
+[05:26] Leonardo: Bom ponto, Ju. Se você tiver mais de uma linha, então, você vai precisar usar as chaves e usar o *return*. É sempre bom ter isso em mente.
+
+[05:33] Leonardo: Você pode fazer uma dessa para nós, Ju?
+
+[05:35] Ju: Vou fazer sim. Vou criar uma *arrow* *function* com mais de uma linha de instrução.
+
+[05:48] Ju: Deixa eu pensar. Vamos fazer uma soma, vamos fazer um código um pouco mais extenso. Então, vou criar uma `const` e vou dizer que essa `const`, a minha função vai somar números, mas, tem que ser números pequenos; só vai somar números que sejam de 1 a 9. 
+
+[06:02] Ju: Minha `const` eu vou chamar de `somaNumerosPequenos`, só para sabermos bem o que essa função faz. Ela vai somar 2 números,  como as outras, no caso, como são dois parâmetros, eu vou passar (abro  parênteses), `(num1, num2)`.
+
+[06:26] Ju: E depois da minha seta (a seta é composta pelo sinal de  igual e o sinal de maior que, juntos, sem espaço. Ela forma esse sinal  de seta); cuidado na hora de fazer para não confundir o sinal de igual  com hífen, não é hífen com mais igual, é um sinal de igual seguido pelo  mais igual, que é diferente do operador (eu vou deixar marcado) de maior ou igual que, que é primeiro o maior e depois o igual. Só para não nos  confundirmos.
+
+[07:11] Ju: Então é um operador. Quando queremos a seta, primeiro escrevemos igual e depois escrevemos maior que.
+
+[07:18] Ju: Como uma é uma soma de números pequenos, eu não posso só  sair somando, ‘1 = 1 = 2’, eu tenho que passar uma condição para isso.  Então, meu código vai ter algumas coisas, algumas instruções a mais e  como o Léo disse, não dá para fazer isso sem retorno, sem chaves.
+
+[07:35] Ju: Então, o começo da nossa *arrow* *function* fica igual. Criamos uma `const`, passamos parâmetros, passam a seta e abro chaves, normalmente, como nós trabalhamos com as funções que vimos anteriormente. 
+
+[07:47] Ju: E eu posso passar os meus *ifs*, se `if (num1` ou, (o operador de ou) `|| num2 > 10)`, dou o `return` e aqui sim, precisamos do *return*, porque quando trabalhamos com condicionais ou o *if* ou o *else* vai retornar. 
+
+[08:11] Ju: Então, ele vai, a partir do momento (lembrando o que conversamos anteriormente), o *return* é a última coisa da função, então, ele bateu no retorno ele não vê mais nada.
+
+[08:22] Ju: Essa é uma função que tem duas possibilidades de retorno. Ou um dos dois números vai ser maior do que 10, e aí, vamos retornar `”somente números de 1 a 9”`, por exemplo. Porque queremos somar números pequenos.
+
+[08:40] Ju: Qualquer outro caso daria para fazer outras condicionais, mas, vamos manter por essa. Aí sim, retornamos `return num1 + num2`.
+
+[08:51] Ju: Esse é um caso bem bacana, que inclui não só *arrow* *function* com o bloco de código e com o retorno, mas, também, um caso que temos  uma função que ela pode ter mais de um retorno, dependendo da  condicional que cair. 
+
+[09:11] Ju: Se entrar no bloco de *if*, vamos retornar uma coisa, se não, vamos retornar outra coisa.
+
+[09:16] Ju: Certo, Léo?
+
+[09:19] Leonardo: Exatamente. 
+
+[09:21] Ju: Então, agora que vimos declaração de função, expressão de função e *arrow* *function*, como que sabemos quando utilizamos cada um desses três tipos?
+
+[09:37] Leonardo: Ju, em cima disso temos: *arrow* *function* é um jeito rápido e curto de você escrever a função, então, nosso código acaba ficando mais curto e isso é uma coisa boa.
+
+[09:49] Leonardo: Porém, se você achar que ela não é muito fácil de  entender o que está acontecendo dentro dela, você pode dar declaração de função, sem problema, para fazer isso.
+
+[09:59] Leonardo: A *arrow* *function* também tem  algumas vantagens, quando estamos mexendo com objetos, que não vamos ver nesse curso, vamos tratar isso em outro curso. Mas, de forma geral,  podemos utilizar as três funções, só lembrando da questão do *hoisting* de quando fazemos declaração da função completa.
+
+[10:21] Ju: Então, a *arrow* *function* se comporta nessa questão de *hoisting*, exatamente, da mesma forma que a expressão de função, não é?
+
+[10:29] Leonardo: Exatamente.
+
+[10:30] Ju: Então, `/Hoistinhg: arrow function` se comportam como expressão.
+
+[10:41] Ju: Como já falamos no começo, a função vai ter muito mais  coisas para vermos na vida, inclusive, quando vocês estiverem estudando a questão de objetos, que não vamos lidar neste curso.
+
+[10:57] Ju: Mas, existe muita coisa de função que é ligado ao estudo  de objetos, fica no seu dicionário de JavaScript mental. E, Léo, se não  tivermos mais nada para falar sobre *arrow* *function*,  neste momento, podemos subir todo esse código que fizemos de algumas  aulas para cá, para o GitHub, não é? Para ele ficar salvo.
+
+[11:22] Leonardo: Exatamente. É sempre bom salvar o código em GitHub.
+
+[11:26] Ju: Certo. Lembrando o processo, eu já estou no terminal, dentro da pasta certa. Como já tínhamos feito um `commit` anterior, na minha pasta “2206-fundamentos-js”, que é o nome do curso  (você pode criar o seu), nós só precisamos continuar com o processo de  três passos básicos do GitHub, que é de `commit push`. 
+
+[11:53] Ju: Eu vou, antes, dar um comando `git status`, só para ver se todos os meus arquivos novos estão listados. Então, os  arquivos listados são os que ainda não subimos, não passamos para o  GitHub, ainda. E o próximo comando é `git add`; eu vou dar `git add .` porque o Git já se encarrega de pegar tudo que não está listado ainda, e colocar dentro da caixa do *commit*, criando para nós.
+
+[12:22] Ju: Vou dar `git status`, de novo, para ver se foi tudo indexado. Agora sim, o GitHub enxerga como um novo arquivo, um *new file*, esses arquivos novos e estamos prontos para os dois passos finais, que é `git commit –m` (-m de mensagem), e eu vou passar como mensagem; o que eu passo como  mensagem, Léo? Sempre tenho problemas em criar mensagens para o GitHub.
+
+[12:49] Leonardo: Podemos colocar operadores e funções.
+
+[12:55] Ju: Operadores e funções. E o último, final, `git push origin master` e não deu nenhuma mensagem de erro. E eu, sem querer, apaguei a mensagem.
+
+[13:16] Leonardo: Ju, agora já subiu tudo. Não temos mais nada para falar de função, por enquanto, certo?
+
+[13:22] Ju: Certo.
+
+[13:23] Leonardo: Então, nos vemos no próximo vídeo.
+
+[13:25] Ju: Até lá!
+
+# Estrutura do `if`
+
+Durante o curso, fizemos uso de uma estrutura chamada de **condicional** para definir o fluxo dos nossos programas. As estruturas condicionais  são essenciais para a programação, pois permitem que um programa execute este ou aquele bloco de código de acordo com uma *condição*, por exemplo: “**Se** o e-mail e a senha estiverem corretos, o usuário poderá acessar o sistema. **Senão** ele deve receber um aviso de credenciais de acesso incorretas”. Uma  condição exclui automaticamente a outra, pois ou ambas as credenciais  (e-mail e senha) estarão corretas, ou não.
+
+> As estruturas condicionais permitem que o código se ramifique e tome “caminhos” diferentes de acordo com a condição fornecida.
+
+Abaixo, vamos relembrar a estrutura condicional `if`e suas variações:
+
+## `if`
+
+A principal estrutura condicional é `if`, que podemos traduzir literalmente como “se”:
+
+```scss
+if (condicao) {
+ // código a ser executado
+}
+```
+
+A `condicao` é sempre uma expressão que deverá ser avaliada e retornar `true` ou `false` (ou seus equivalentes “truthy” ou “falsy”). O bloco de código dentro do `if` só será executado caso a expressão retorne `true` ou um valor “truthy”. Por exemplo:
+
+```javascript
+const num = 10;
+
+if (num === null) {
+ console.log('número não fornecido');
+}
+```
+
+No exemplo acima, a instrução `console.log(‘número não fornecido’);` não será executada, pois como a variável `num` foi definida com um valor de `10`, o resultado da comparação `num === null` retornará `false`. Ou seja, o interpretador não vai, como dizemos, “entrar no if” e executar o código.
+
+Vejamos um outro exemplo:
+
+```javascript
+const num = 10;
+
+if (num !== null) {
+ console.log(`o número é ${num}`);
+}
+```
+
+Neste novo exemplo, o código dentro do bloco `if` será executado normalmente, pois **o resultado da expressão `num !== null` (ou seja, “o valor da variável num é diferente de null”) retorna `true`**.
+
+A expressão acima também poderia ser escrita da seguinte forma:
+
+```javascript
+if (num) {
+ console.log(`o número é ${num}`);
+}
+```
+
+Com o mesmo resultado.
+
+Uma vez que `null` é um valor que podemos atribuir a uma variável, a seguinte estrutura também seria possível:
+
+```javascript
+const num = null;
+
+if (num === null) {
+ console.log('número não fornecido');
+}
+```
+
+O código acima também pode ser escrito da seguinte forma, pois `null` é considerado um valor “falsy”:
+
+```javascript
+if (!num) {
+ console.log('número não fornecido');
+}
+```
+
+### Múltiplas condições
+
+É possível usar os operadores AND (`&&`) ou OR (`||`) para executar o código no `if` caso uma das condições for verdadeira, ou as duas:
+
+```javascript
+const num = 11;
+
+if (num > 10 || !num) {
+ console.log('número não válido');
+}
+```
+
+O console exibe a mensagem corretamente, pois uma das condições foi atendida e retornou `true` (`num > 10`). Usamos o operador lógico `||`, *or* (ou *ou* em português) para especificar que a condição do `if` será validada se apenas uma das condições for verdadeira, mas não necessariamente todas.
+
+Também é possível usar o operador lógico `&&` (*and* ou *e* em português) para especificar que a condição do `if` será validada apenas se todas as condições retornarem true:
+
+```javascript
+const num = 11;
+
+if (num > 10 && num < 20) {
+ console.log('número válido');
+}
+```
+
+O console acima é executado normalmente, pois o número `11` atende ambas as condições especificadas no `if`: `num` ser maior do que `10` e/*and*/`&&` ser menor do que `20`.
+
+## `if…else`
+
+Outra forma de condicional muito utilizada é adicionar a cláusula `else` para ser executada quando a condição do `if` retorna `false`. Podemos ler `if…else` como “se… senão”, como por exemplo “**se** uma dada condição for verdadeira (`true`) execute um determinado código; **senão**, execute outro código”.
+
+```javascript
+function verificaNumero(numero) {
+
+ if (numero > 10) {
+   return 'número maior que 10';
+ } else {
+   return 'número não é maior que 10';
+ }
+ }
+
+console.log(verificaNumero(9)) //número não é maior que 10
+```
+
+No exemplo acima, a comparação `numero > 10` retorna false, pois a função foi executada tendo `9` como argumento para `num`. Assim, o bloco de código dentro do `if` é ignorado e o interpretador vai direto para o bloco dentro do `else`. 
+
+> Veja que `else` não leva nenhuma condição entre parênteses, pois é executada automaticamente caso a condição do `if` retorne `false` ou um valor “falsy”. 
+
+## `else if`
+
+A condicional `if…else` vai executar um bloco de código entre duas possibilidades, dependendo do resultado da expressão que é passada como condição do `if`. Porém, em alguns casos é necessário mais de duas opções de fluxo para o código; para estes casos existe a cláusula `else if`: 
+
+```javascript
+const num = 15;
+
+if (num >= 0 && num <= 10) {
+  console.log('número entre zero e dez');
+} else if (num > 10 && num <= 20) {
+  console.log('número entre dez e vinte');
+} else if (num > 20 && num <= 30) {
+  console.log('número entre vinte e trinta');
+} else {
+  console.log('outro número');
+}
+```
+
+> Veja que a cláusula `else if` também precisa receber a condição (ou as condições) como parâmetros, ao contrário do `else`, que deve fechar a cadeia de condicionais e continua sem receber nenhum  parâmetro, pois é o código que será executado caso todas as outras  condições anteriores falhem.
+
+> **IMPORTANTE**: Ao trabalhar com múltiplas condições e `else if`, lembre-se sempre que cada condição e cada bloco (`if`, `else if` e `else`) deve representar condições excludentes entre si! Ou seja, não pode  haver ambiguidade entre as condições - uma mesma condição válida tanto  no `if` quanto no `else if`, por exemplo.
+
+Faça o teste com diversos valores e confira os resultados!
+
+# Para saber mais: Git e GitHub
+
+O [Git](https://git-scm.com/) é o que chamamos de **sistema de versionamento (ou controle) de código**. Existem outros, porém ele se tornou o mais utilizado no mundo todo.
+
+O [GitHub](https://github.com/) é uma plataforma que utiliza a tecnologia Git para que qualquer pessoa  cadastrada possa salvar, atualizar e acessar seus códigos ou os códigos  de seu grupo de trabalho ou empresa.
+
+Neste curso não vamos abordar o Git ou como ele funciona. Caso você  precise relembrar como ele funciona, pode consultar os seguintes  materiais de referência:
+
+- O [curso da Alura de GitHub e controle de versão](https://cursos.alura.com.br/course/git-github-controle-de-versao) que faz parte da formação [Iniciante em Programação](https://cursos.alura.com.br/formacao-programacao);
+- Esta [live do YouTube](https://www.youtube.com/watch?v=nec3n02idMw&ab_channel=AluraCursosOnline) sobre a ferramenta, com várias informações bacanas sobre como ela funciona;
+- A [websérie no Youtube Git e GitHub Para Sobrevivência](https://www.youtube.com/watch?v=BAmvmaKQklQ&t=9s&ab_channel=AluraCursosOnline) que vai desde o conteúdo básico até o mais avançado!
+
+# Faça como eu fiz: Separando código em funções
+
+Agora que já sabemos como declarar funções com partes específicas de  códigos e executá-las no momento certo, você pode voltar ao que já  fizemos nas aulas anteriores e reescrever - ou **refatorar** - para que cada parte esteja separada em sua função.
+
+Um exemplo que podemos aplicar com as variáveis de soma que criamos no início do curso:
+
+```cpp
+const num1 = 5;
+const num2 = 5;
+const resultado = num1 + num2;
+```
+
+O código acima pode ser refatorado como função, recebendo os números como argumentos para que a função possa ser executada com qualquer valor:
+
+```javascript
+function soma(num1, num2) {
+ return num1 + num2;
+}
+
+console.log(soma(5, 5))
+```
+
+Pratique bastante e, se precisar, peça ajuda nas nossas comunidades!
+
+# Projeto final do curso
+
+Você pode [baixar o zip](https://github.com/alura-cursos/2206-fundamentos-js/archive/refs/heads/master.zip) ou acessar o link do repositório no [GitHub](https://github.com/alura-cursos/2206-fundamentos-js)!
+
+# O que aprendemos?
+
+## Nesta aula vimos:
+
+- O que são funções, pequenos trechos de código que podem ser executados uma ou mais vezes.
+- As vantagens de se usar uma função, pois com elas conseguimos deixar o  código mais curto e mais legível, facilitando a manutenção.
+- Como retornar informações da função, utilizando o `return`, lembrando que o `console.log()` apenas mostra a informação no terminal e não para outras partes do código.
+- A utilidade dos argumentos, já que com eles podemos passar variáveis para as funções poderem usar os valores.
+- Que com o *hoisting* o JavaScript analisa todo o código procurando por variáveis declaradas com `var` e funções para trazer tais declarações para o início do código.
+- Expressões de função, uma maneira diferente de montar funções usando variáveis do  tipo const e chamando-as pelo nome. Lembrando que é necessário que o  programa passe pela variável antes de podermos chamá-la, já que não há  suporte à *hoisting*.
+- *Arrow function*, uma função declarada de maneira mais compacta usando uma const. A *arrow function* também não tem suporte à *hoisting*.
+
+# Parabéns
+
+# Chegou o momento de celebrar sua grande conquista!
+
+![ilustração de uma mão segurando um troféu de ouro](https://s3.amazonaws.com/caelum-online-public/alurastart-555-pong/aula5/troufeu.png)
+
+Neste treinamento, todas as barreiras foram vencidas e você aprofundou ainda mais seus conhecimentos em JavaScript.
+
+Você aprendeu o que são tipos primitivos na prática. Além disso,  entendeu a principal questão das entrevistas de emprego em JavaScript,  que é a diferença entre `var`, `let` e `const`. Também viu os principais fundamentos do JS, como declaração de variáveis, funções, operadores lógicos, *arrow function* e claro, Git e GitHub. 
+
+Nossa, quanta coisa legal!
+
+Mostre os trechos de código desenvolvidos para outras pessoas e marque a Alura nas redes sociais com a hashtag #AluraJS.
+
+> Agora, dê uma nota para o curso, pegue seu certificado e comemore bastante essa conquista. 
+
+# Conclusão
+
+[00:00] Ju: Chegamos ao final desse curso de Fundamentos de JavaScript. Esperamos que tenham gostado. 
+
+[00:05] Ju: Nós apresentamos esses fundamentos das partes principais e mais básicas de qualquer linguagem de programação, ou qualquer  linguagem mais comercial que trabalhamos hoje, mas, com algumas das  particularidades do JavaScript.
+
+[00:20] Ju: Léo, o que mostramos para o pessoal nesse curso? Vamos dar uma repassada.
+
+[00:27] Leonardo: Começamos trabalhando com tipos, então, tipo *number*, tipo *string*, tipo *booleana*. Ju, você pode nos mostrar o código? Compartilhar a tela para vermos em código e falar, ao mesmo tempo, para ficar legal?
+
+[00:39] Ju: Nós vimos tipos *booleanos*, *true* ou *false*. O que mais? Tipo *number*
+
+[00:45] Leonardo: Tipo *number* e o tipo *string*.
+
+[00:48] Leonardo: Depois, trabalhamos com as variáveis, com a var, *let*, const. Vimos a diferença entre elas, que são essenciais para podermos trabalhar; isso é uma característica do JavaScript.
+
+[01:05] Leonardo: Também vimos a diferença entre o NodeJS e o  JavaScript, que o Node é o interpretador e o JavaScript é a linguagem,  então, eles são duas coisas diferentes.
+
+[01:16] Leonardo: Vimos também sobre operadores.
+
+[01:19] Ju: Operadores, por exemplo, ternário.
+
+[01:25] Leonardo: Por exemplo, operador ternário. E, por fim,  passamos nas funções, onde descrevemos diversos tipos diferentes.  Inclusive, *aero* *function*, algumas coisas são exclusivas do JavaScript.
+
+[01:43] Ju: Sim. O JavaScript tem umas particularidades do *hoisting*, de mandar os códigos para cima, então, tudo isso precisamos ver desde o começo, para garantirmos de entender essas partes principais. 
+
+[01:55] Ju: A intenção é que você estude cada uma dessas partes com  bastante cuidado, para que esses conceitos, por trás do que vimos no  curso, sejam absorvidos. Então, quando você for aprender mais conteúdos, for acrescentando mais coisas do JavaScript, tudo que vimos já está bem fresco na cabeça e bem mais completo do que, simplesmente, sair  digitando o *let* e a coisa funcionar. Não é nossa intenção no curso.
+
+[02:22] Ju: Isso vai te ajudar a entender comportamentos da linguagem, *bugs* e coisas que acontecem e porquê o JavaScript se comporta de determinadas maneiras.
+
+[02:32] Ju: Por enquanto, é só. Obrigada por ter nos acompanhado até aqui. Léo, vamos dar um tchau?
+
+[02:40] Leonardo: Podemos dar um tchau, agora, para todo mundo. Obrigada por terem participado desse curso    .
+
+[02:46] Ju: E até o próximo curso.
+
+[02:48] Leonardo: Até!
+
